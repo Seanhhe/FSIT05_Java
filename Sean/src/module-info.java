@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author SEAN
+ *
+ */
+module sean {
+}
