@@ -17,10 +17,11 @@ public class Brad12 {
 		case "Brad": System.out.println("a"); break;
 		default: System.out.println("D"); break;
 		}
-		 }
 	}
+}
 
 
 /*
- 在基本型別中，只有byte, short, char, int, 才能放入switch()中
+ 在基本型別中，只有byte, short, char, int, 才能放入switch()中。
+ String可以被設定
  */
