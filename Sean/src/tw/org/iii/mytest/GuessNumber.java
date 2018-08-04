@@ -66,7 +66,8 @@ public class GuessNumber extends JFrame{
 	
 	//寫成方法
 	void doGuess() {
-		counter++;
+		counter = 0;
+		counter++; 
 		String result = checkAB(); //檢查幾A幾B
 		hist.append(input.getText() + " => " + result + "\n"); //秀結果 \n換行
 		input.setText("");//把輸入區域清空
@@ -75,8 +76,10 @@ public class GuessNumber extends JFrame{
 			JOptionPane.showMessageDialog(null, "恭喜老爺，賀喜夫人"); //null等於父元件
 		}else if (counter == 10) {
 			JOptionPane.showMessageDialog(null, "Loser : " + answer);
-		}//猜錯十次給答案
-		// 至27行，設定全域變數 private int counter
+			//猜錯十次給答案
+			// 至27行，設定全域變數 private int counter
+		}
+		
 		
 		
 		
@@ -106,15 +109,24 @@ public class GuessNumber extends JFrame{
 		
 		//AB判斷邏輯實現
 		int a, b; a = b = 0;//AB紀錄表的初始化
-		for (int i=0; i<guess.length(); i++) {
-			if (guess.charAt(i) == answer.charAt(i)) {
-				a++;
-			}else if(answer.indexOf(guess.charAt(i)) != -1) {
-				b++;
+			if (guess.matches("^[0-9]{3}$")) {
+				for (int i=0; i<guess.length(); i++) {
+					if (guess.charAt(i) == answer.charAt(i)) {
+						a++;
+					}else {
+						if(answer.indexOf(guess.charAt(i)) != -1) {
+							b++;
+						}
+					}
+			}return a + "A" + b + "B";	
+				
+				
 			}
-		}
-			
-		return a + "A" + b + "B";
+			JOptionPane.showMessageDialog(null, "請輸入三位數的數字");
+			input.setText("");
+			hist.setText("");
+			return " ";
+				
 	}
 	
 	
@@ -146,6 +158,14 @@ public class GuessNumber extends JFrame{
 		}
 		//以上取自PokerV2.java
 		return "417";
+	}
+	
+	
+	//重開新局
+	void newGame() {
+		input.setText("");//把輸入區域清空
+		counter = 0;
+		
 	}
 	
 	
