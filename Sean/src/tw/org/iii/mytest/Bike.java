@@ -13,14 +13,14 @@ public class Bike { //每個*.java程式中，只有一個public class，此行�
  * 
  * 
  */
-	private double speed; //加上private把speed屬性封裝起來，再透過方法改變屬性值
+	/*private*/ double speed; //加上private把speed屬性封裝起來，再透過方法改變屬性值
 	//例如體重80KG，要透過方法(運動、不吃)，才能改體重屬性質
 //	 void upSpeed() { //宣告"加速度" 的 "方法" 
-//		 speed = speed ==0?1: speed*1.4; //三元運算式
+//		 speed = speed ==0?1: speed*1.4; //三元運算式  >> 判斷式?true:false
 //	 }
 	 
-	void upSpeed(int gear) { //宣告"加速度" 的 "方法"
-		 speed = speed==0?1:speed*gear*1.4; //三元運算式
+	void upSpeed(/*int gear */) { //宣告"加速度" 的 "方法"
+		 speed = speed==0?1:speed*1.4; //三元運算式
 	 } 
 	
 	
@@ -36,7 +36,7 @@ public class Bike { //每個*.java程式中，只有一個public class，此行�
 	 Bike() { //建構式
 		 //進行初始化的動作
 //		 System.out.println("Bike()");
-		 speed = 0;//初始值0
+		 speed = 1;//初始值0
 	 }
 	 
 	 Bike(double speed) {

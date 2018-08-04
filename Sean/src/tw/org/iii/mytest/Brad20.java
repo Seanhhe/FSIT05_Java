@@ -22,7 +22,7 @@ public class Brad20 {
 		 System.out.println(b1.getSpeed());
 		 System.out.println(b2.getSpeed());
 		 for (int i = 0; b1.getSpeed()<10; i++) {
-			 b1.upSpeed(3);
+			 b1.upSpeed();
 			 System.out.println(b1.getSpeed());
 		 }
 

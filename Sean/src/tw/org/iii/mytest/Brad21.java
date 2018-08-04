@@ -9,7 +9,7 @@ public class Brad21 {
 		System.out.println(b1.getSpeed());
 		b2 = new Bike(1.4);
 		System.out.println(b2.getSpeed());
-		b1.upSpeed(4);
+		b1.upSpeed();
 		System.out.println(b1.getSpeed());
 	}
 
