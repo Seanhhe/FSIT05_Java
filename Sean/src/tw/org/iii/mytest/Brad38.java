@@ -14,7 +14,7 @@ import javax.swing.JFrame;
 
 
 public class Brad38 extends JFrame {
-	private MyPanel myPanel;
+	private MyPanelV4 myPanel;
 	
 	public Brad38() {
 		
@@ -24,7 +24,7 @@ public class Brad38 extends JFrame {
 		setVisible(true);
 		
 		setLayout(new BorderLayout());
-		myPanel = new MyPanel();
+		myPanel = new MyPanelV4();
 		add(myPanel, BorderLayout.CENTER);
 		
 	}
