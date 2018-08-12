@@ -28,10 +28,7 @@ public class MyEditor extends JFrame {
 		super("超強記事本");
 		setLayout(new BorderLayout());
 		
-		setSize(640, 480);
-		setVisible(true);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+
 		JPanel top = new JPanel(new FlowLayout());
 		newfile = new JButton("New"); top.add(newfile);
 		open = new JButton("Open"); top.add(open);
@@ -57,6 +54,10 @@ public class MyEditor extends JFrame {
 				saveFile();
 			}
 		});
+		
+		setSize(640, 480);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 	}
 	
