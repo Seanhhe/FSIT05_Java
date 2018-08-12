@@ -43,10 +43,10 @@ class Bird {
 }
 class BirdV2 extends Bird { //繼承
 
-	@Override //override的例外宣告，要比爸爸少，要比爸爸小。若把下方的 void setLeg改名為setLegV2，@Override刪除就可編譯
-	void setLeg(int leg) throws ParseException, IOException, FontFormatException{ //即使override也要宣告
+	//@Override //override的例外宣告，要比爸爸少，要比爸爸小。若把下方的 void setLeg改名為setLegV2，@Override刪除就可編譯
+	void setLegV2(int leg) throws ParseException, IOException, FontFormatException{ //即使override也要宣告
 		super.setLeg(leg);
-		if (leg>100) {
+		if (leg>1000) {
 			throw new FontFormatException("");
 		}
 	}
