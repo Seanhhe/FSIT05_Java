@@ -26,10 +26,14 @@ class Brad251 {
 		
 	}
 	
-	@Override
-	public boolean equals(Object obj) {
-//		return super.equals(obj);
-		return ((Brad251)obj).getA() == a;
+	public int getA() {return a;}
+	
+//	public boolean equals(Object obj) {
+//		return ((Brad251)obj).getA() == a;
+//	}
+
+	public boolean isSame(Brad251 obj) {
+		return obj.getA() == a; 
 	}
 	
 }
