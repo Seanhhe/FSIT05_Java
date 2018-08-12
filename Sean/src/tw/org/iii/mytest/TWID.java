@@ -46,11 +46,12 @@ public class TWID { //台灣身分證字號類別
 		private TWID(String id) { //最後才加上private
 			this.id = id;
 		}
-		static TWID createTWId(String id) {
+		static TWID createTWId(String id) throws Exception {
 			if (checkId(id)) {
 				return new TWID(id);
 			}else {
-				return null;
+				throw new Exception();
+				//return null;
 			}
 		}
 		

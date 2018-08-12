@@ -60,6 +60,13 @@ public class MyEditor extends JFrame {
 		
 	}
 	
+	private void saveAs() {
+		JFileChooser jFileChooser = new JFileChooser();
+		if (jFileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
+			nowFile = jFileChooser.getSelectedFile();
+			saveFile();
+		}
+	}
 	
 	private void openFile() {
 		//javax.swing.JFileChooser
@@ -72,6 +79,11 @@ public class MyEditor extends JFrame {
 				nowFile = null;
 			}
 		}
+	}
+	
+	private void clear() {
+		nowFile = null;
+		editor.setText("");
 	}
 	
 	private void readFile() {
@@ -99,6 +111,7 @@ public class MyEditor extends JFrame {
 		}
 	}
 	
+
 	
 	
 	public static void main(String[] args) {

@@ -2,7 +2,7 @@ package tw.org.iii.mytest;
 
 public class Brad22 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		TWID id1 = new TWID();
 		TWID id2 = new TWID(true);
 		TWID id3 = new TWID(14);
