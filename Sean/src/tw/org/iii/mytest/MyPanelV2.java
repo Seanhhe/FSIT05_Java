@@ -21,7 +21,8 @@ public class MyPanelV2 extends MyPanel {
 	
 	//類別中的類別 (內部類別)
 	class MyMouseListener implements MouseListener {
-		
+	
+	//以下@Override的方法敘述數量需完整，數量不足則不能編譯	
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		System.out.println("B");
@@ -31,6 +32,24 @@ public class MyPanelV2 extends MyPanel {
 	
 	@Override
 	public void mousePressed(MouseEvent e) {
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
 	
