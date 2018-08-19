@@ -14,6 +14,7 @@ import java.util.LinkedList;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+
 public class MyView extends JPanel {
 	//05.
 	private MyMouseListener mouseListener = new MyMouseListener();

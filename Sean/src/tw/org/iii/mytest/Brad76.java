@@ -2,6 +2,7 @@ package tw.org.iii.mytest;
 
 public class Brad76 {
 
+	
 	public static void main(String[] args) {
 		Brad761 t1 = new Brad761("A");
 		Brad761 t2 = new Brad761("B");

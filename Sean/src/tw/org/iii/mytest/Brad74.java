@@ -9,7 +9,7 @@ import java.util.Set;
 public class Brad74 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("name", "Brad");
 		map.put("stage", 2);
