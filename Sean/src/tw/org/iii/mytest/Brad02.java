@@ -25,6 +25,10 @@ public class Brad02 {
 		System.out.println(b5);
 //		b5 = b5 +1;  b5若宣告為int就ok
 		
+		//2018.08.12 from Brad50
+		int v1 = (int)5000000000L;
+		System.out.println(v1);
+		
 	}
 
 }

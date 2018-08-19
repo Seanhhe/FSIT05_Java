@@ -3,7 +3,9 @@ package tw.org.iii.mytest;
  * 01.先看public static void main(String[] args) {
 		 new GuessNumber();
  * 02.再看繼承、匯入
- * 03.
+ * 03.產生視窗
+ * 04.設定物件實體
+ * 05.配置版面
  */
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -66,19 +68,35 @@ public class GuessNumber extends JFrame{
 	
 	//寫成方法
 	void doGuess() {
-		counter = 0;
 		counter++; 
 		String result = checkAB(); //檢查幾A幾B
-		hist.append(input.getText() + " => " + result + "\n"); //秀結果 \n換行
-		input.setText("");//把輸入區域清空
-				
-		if (result.equals("3A0B")) { //equals比對字串
-			JOptionPane.showMessageDialog(null, "恭喜老爺，賀喜夫人"); //null等於父元件
-		}else if (counter == 10) {
-			JOptionPane.showMessageDialog(null, "Loser : " + answer);
-			//猜錯十次給答案
-			// 至27行，設定全域變數 private int counter
+		
+		if (result.equals(" ")) {
+			input.setText("");
+			hist.setText("請輸入三位數的數字" + "\n");
+		}else {
+			hist.append(input.getText() + " => " + result + "\n"); //秀結果 \n換行
+			input.setText("");//把輸入區域清空
+					
+			if (result.equals("3A0B")) { //equals比對字串
+				JOptionPane.showMessageDialog(null, "恭喜老爺，賀喜夫人"); //null等於父元件
+			}else if (counter == 10) {
+				JOptionPane.showMessageDialog(null, "Loser : " + answer);
+				//猜錯十次給答案
+				// 至27行，設定全域變數 private int counter
+			}
 		}
+		
+//		hist.append(input.getText() + " => " + result + "\n"); //秀結果 \n換行
+//		input.setText("");//把輸入區域清空
+//				
+//		if (result.equals("3A0B")) { //equals比對字串
+//			JOptionPane.showMessageDialog(null, "恭喜老爺，賀喜夫人"); //null等於父元件
+//		}else if (counter == 10) {
+//			JOptionPane.showMessageDialog(null, "Loser : " + answer);
+//			//猜錯十次給答案
+//			// 至27行，設定全域變數 private int counter
+//		}
 		
 		
 		
@@ -123,8 +141,6 @@ public class GuessNumber extends JFrame{
 				
 			}
 			JOptionPane.showMessageDialog(null, "請輸入三位數的數字");
-			input.setText("");
-			hist.setText("");
 			return " ";
 				
 	}
@@ -175,3 +191,18 @@ public class GuessNumber extends JFrame{
 	}
 
 }
+
+
+/*
+ * 字串 String
+ * concat方法，不會破壞原本的字串
+ * replace也不會改變原字串
+ * split切割，並傳回字串陣列
+ * 
+ * Class Object (java.lang.Object)
+ * hashCode雜湊 => 快速判斷兩個物件是否相同物件實體(後續再由equals判斷)
+ * 
+ * toString => 把物件轉換成字串 => 
+ * 
+ * 
+ */
