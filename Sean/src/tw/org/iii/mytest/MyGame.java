@@ -16,7 +16,6 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-
 public class MyGame extends JFrame {
 	private GamePanel gPanel;
 	

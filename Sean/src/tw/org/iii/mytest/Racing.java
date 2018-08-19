@@ -8,7 +8,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-
 public class Racing extends JFrame {
 	private JButton go;
 	private JLabel[] lanes = new JLabel[8];//跑道

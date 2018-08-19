@@ -3,7 +3,6 @@ package tw.org.iii.mytest;
 import java.util.Timer;
 import java.util.TimerTask;
 
-
 public class Brad75 {
 
 	public static void main(String[] args) {

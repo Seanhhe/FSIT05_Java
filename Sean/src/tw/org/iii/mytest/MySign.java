@@ -16,7 +16,6 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-
 public class MySign extends JFrame {
 	//03.
 	private JButton clear, undo;
